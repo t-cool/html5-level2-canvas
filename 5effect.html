@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 1. 描画の場所を確保する -->
+<canvas id="myCanvas" width="250" height="300" style="border:1px solid black;"></canvas>
+<script>
+// 2. 2Dコンテキストを初期化する
+// canvas 要素を取得する
+var canvas = document.getElementById("myCanvas");
+// 2Dコンテキストを取得する
+var context = canvas.getContext("2d");
+
+// 3. 2Dコンテキストを利用してイメージを描く
+// 図形を塗りつぶしで描画する
+context.fillStyle = 'blue';
+context.fillRect(50, 50, 100, 100);
+
+// 透明度を設定する
+context.globalAlpha = 0.5;
+
+// 図形を塗りつぶしで描画する（透明度を適用）
+context.fillStyle = 'red';
+context.fillRect(100, 100, 100, 100);
+
+// 透明度をリセットする
+context.globalAlpha = 1.0;
+
+// 合成方法を設定する
+context.globalCompositeOperation = 'source-atop';
+
+// 図形を塗りつぶしで描画する（合成方法を適用）
+context.fillStyle = 'green';
+context.fillRect(150, 150, 100, 100);
+
+</script>
+</body>
+</html>

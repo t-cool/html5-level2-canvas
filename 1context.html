@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 1. 描画用のキャンバス要素を作成する -->
+<canvas id="myCanvas" style="border:1px solid black;"></canvas>
+<script>
+// 2. 2Dコンテキストを初期化する
+// canvas要素を取得する
+var canvas = document.getElementById('myCanvas');
+// 2Dコンテキストを取得する
+var context = canvas.getContext('2d');
+
+// 3. 2Dコンテキストを利用してイメージを描く
+// 線の色を青色に設定する
+context.strokeStyle = 'blue'; 
+
+// 線の太さを3ピクセルに設定する
+context.lineWidth = 3;
+
+// 新しい描画パスを開始する
+context.beginPath();
+
+// 始点を(x:200, y:10)にする
+context.moveTo(200, 10);
+
+// 終点を(x:50, y:100)にする
+context.lineTo(50, 100);
+
+// 線を描画する
+context.stroke();
+
+</script>
+</body>
+</html>

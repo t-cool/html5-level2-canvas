@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 1. 描画の場所を確保する -->
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid black;"></canvas>
+<script>
+// 2. 2Dコンテキストを初期化する
+// canvas 要素を取得する
+var canvas = document.getElementById("myCanvas");
+// 2Dコンテキストを取得する
+var context = canvas.getContext("2d");
+
+// 3. 2Dコンテキストを利用してイメージを描く
+// 新しいイメージオブジェクトを作成する
+var img = new Image();
+
+// HTMLファイルと同じ階層にある 'image.png' を画像ソースとして指定する
+img.src = './image.png';
+
+// 画像が読み込まれた後に実行されるイベント
+img.onload = function() {
+
+  // オリジナル画像を描画する
+  context.drawImage(img, 50, 100);
+
+  // 座標点を描画する
+  context.beginPath();
+  context.arc(50, 100, 5, 0, Math.PI * 2);
+  context.fillStyle = 'red';
+  context.fill();
+
+  // 座標テキストを描画する
+  context.fillStyle = 'black';
+  context.font = '12px Arial';
+  context.fillText("(50, 100)", 60, 95);
+};
+
+</script>
+</body>
+</html>

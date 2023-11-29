@@ -1,0 +1,21 @@
+次に、HTMLとJavaScriptを使って、キャンバス上に線、矩形、円、半円などの異なる図形を描く方法について学びましょう。具体的には、それぞれの図形を描くためのコードの書き方と、それに使われる引数に注目していきます。
+
+1. **まずは、描画用のキャンバスを作ります**:
+   - HTMLに`<canvas id="myCanvas" width="300" height="400" style="border:1px solid lightgray;"></canvas>`と書くことで、描画用のキャンバスを作ります。`id`属性はキャンバスを特定するため、`width`と`height`はキャンバスの大きさを決めるために使います。
+
+2. **次に、2Dの描画環境を用意します**:
+   - JavaScriptで`var canvas = document.getElementById("myCanvas");`を使ってキャンバスを見つけ、`var context = canvas.getContext("2d");`で2D描画のためのツールを準備します。
+
+3. **ではイメージを描いてみましょう**:
+   - **線を描くには**: `context.beginPath();`で新しい描画を始め、`context.moveTo(10, 40);`でスタート地点を設定し、`context.lineTo(200, 40);`で終点まで線を引きます。
+   そして`context.stroke();`で線を描画します。
+   
+   - **矩形を描くには**: `context.fillStyle = 'rgba(0, 0, 255, 0.5)';`で塗りつぶし色を設定し、`context.fillRect(10, 70, 150, 100);`で矩形を描きます。
+   さらに、`context.strokeStyle = 'red';`で線の色を設定し、`context.strokeRect(10, 70, 150, 100);`で矩形の輪郭を描きます。
+   
+   - **円を描くには**: `context.arc(80, 230, 40, 0, Math.PI * 2);`で円を描きます。このとき、`(80, 230)`は円の中心、`40`は半径、`0`から`Math.PI * 2`までが描画の角度（つまり一周）です。
+   
+   - **半円を描くには**: `context.fillStyle = 'green';`で塗りつぶし色を設定し、`context.arc(80, 300, 40, Math.PI, 0, true);`で半円を描きます。ここでは`(80, 300)`が中心、`40`が半径、`Math.PI`から`0`が描画角度です。`true`は反時計回りに描くことを意味します。
+
+これらのステップを実行すると、キャンバス上に色とスタイルが異なる線、矩形、円、半円が描かれます。
+

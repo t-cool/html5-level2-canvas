@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>   
+<!-- 1. 描画の場所を確保する -->
+<canvas id="myCanvas" width="200" height="150" style="border:1px solid black;"></canvas>
+<script>
+// 2. 2Dコンテキストを初期化する
+// canvas要素を取得する
+var canvas = document.getElementById("myCanvas");
+// 2Dコンテキストを取得する
+var context = canvas.getContext("2d");
+
+// 3. 2Dコンテキストを利用してイメージを描く
+// フォントの設定をする
+context.font = "20px Arial";
+
+// テキストの塗りつぶし描画をする
+context.fillText("Hello, Canvas!", 10, 50);
+
+// テキストの輪郭を描画する
+context.strokeText("Hello, Canvas!", 10, 100);
+
+</script>
+</body>
+</html>
