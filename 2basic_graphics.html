@@ -2,7 +2,7 @@
 <html>
 <body>
 <!-- 1. 描画用のキャンバス要素を作成する -->
-<canvas id="myCanvas" width="300" height="400" style="border:1px solid black;"></canvas>
+<canvas id="myCanvas" width="230" height="400" style="border:1px solid black;"></canvas>
 <script>
 // 2. 2Dコンテキストを初期化する
 // canvas要素を取得する
@@ -19,10 +19,10 @@ context.stroke();
 
 // 矩形を描画する
 context.beginPath();
-context.fillStyle = 'rgba(0, 0, 255, 0.5)'; // 塗りつぶしの色
-context.fillRect(10, 70, 150, 100); // 塗りつぶしの矩形
+context.fillStyle = 'rgba(0, 0, 255, 0.5)'; // 塗る色
+context.fillRect(10, 70, 150, 100); // 矩形(塗り)
 context.strokeStyle = 'red'; // 線の色
-context.strokeRect(10, 70, 150, 100); // 線で囲まれた矩形
+context.strokeRect(10, 70, 150, 100); // 矩形(枠線)
 
 // 円を描画する
 context.beginPath();
@@ -33,7 +33,7 @@ context.stroke();
 context.beginPath();
 context.fillStyle = 'green'; // 塗りつぶしの色
 
-// 半円の円弧, context.arc(中心x座標, 中心y座標, 半径, 円の始点, 円の終点, 円の観点:trueで反時計周り);
+// context.arc(中心x, 中心y, 半径, 始点, 終点, 回転方向)
 context.arc(80, 300, 40, Math.PI, Math.PI*2, true);
 
 // 半円の内部を塗りつぶす

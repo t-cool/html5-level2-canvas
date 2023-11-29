@@ -2,7 +2,7 @@
 <html>
 <body>
 <!-- 1. 描画の場所を確保する -->
-<canvas id="myCanvas" width="300" height="300" style="border:1px solid black;"></canvas>
+<canvas id="myCanvas" width="230" height="300" style="border:1px solid black;"></canvas>
 <script>
 // 2. 2Dコンテキストを初期化する
 // canvas 要素を取得する
@@ -14,7 +14,7 @@ var context = canvas.getContext("2d");
 // 新しいイメージオブジェクトを作成する
 var img = new Image();
 
-// HTMLファイルと同じ階層にある 'image.png' を画像ソースとして指定する
+// HTMLファイルと同じ階層の 'image.png' をソースとして指定
 img.src = './image.png';
 
 // 画像が読み込まれた後に実行されるイベント
