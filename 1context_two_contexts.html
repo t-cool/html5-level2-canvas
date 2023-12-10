@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<!-- 描画用のキャンバス要素を作成する -->
+<canvas id="myCanvas" style="border:1px solid black;"></canvas>
+
+<!-- 新しいキャンバス要素を追加する -->
+<canvas id="mySecondCanvas" style="border:1px solid black;"></canvas>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;!--
+&lt;canvas&gt;要素を2つ追加し、各キャンバスに個別のid を割り当てます。
+これにより、JavaScript から個別に参照できるようになります。
+--&gt;
+
+&lt;!-- 描画用のキャンバス要素を作成する --&gt;
+&lt;canvas id="myCanvas" style="border:1px solid black;"&gt;&lt;/canvas&gt;
+
+&lt;!-- 新しいキャンバス要素を追加する --&gt;
+&lt;canvas id="mySecondCanvas" style="border:1px solid black;"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+// 既存のキャンバス要素のためのスクリプト
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+context.strokeStyle = 'blue';
+context.lineWidth = 3;
+context.beginPath();
+context.moveTo(200, 10);
+context.lineTo(50, 100);
+context.stroke();
+
+// 新しいキャンバス要素のためのスクリプト
+var secondCanvas = document.getElementById('mySecondCanvas');
+var secondContext = secondCanvas.getContext('2d');
+secondContext.strokeStyle = 'red';
+secondContext.lineWidth = 3;
+secondContext.beginPath();
+secondContext.moveTo(200, 10);
+secondContext.lineTo(50, 100);
+secondContext.stroke();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<script>
+// 既存のキャンバス要素のためのスクリプト
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+context.strokeStyle = 'blue';
+context.lineWidth = 3;
+context.beginPath();
+context.moveTo(200, 10);
+context.lineTo(50, 100);
+context.stroke();
+
+// 新しいキャンバス要素のためのスクリプト
+var secondCanvas = document.getElementById('mySecondCanvas');
+var secondContext = secondCanvas.getContext('2d');
+secondContext.strokeStyle = 'red';
+secondContext.lineWidth = 3;
+secondContext.beginPath();
+secondContext.moveTo(200, 10);
+secondContext.lineTo(50, 100);
+secondContext.stroke();
+</script>
+</body>
+</html>
