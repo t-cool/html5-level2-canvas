@@ -1,6 +1,6 @@
 # html5-level2-canvas
 
-HTML5(JavaScript) レベル2試験 技術解説セミナーの資料です。
+[HTML5(JavaScript) レベル2試験 技術解説セミナー](https://html5exam.jp/news/event/page3652.html) の資料です。
 
 ## 内容
 
